@@ -1,0 +1,13 @@
+{
+    "cleanUrls": true,
+    "rewrites": [
+      {
+        "source": "/volume-one",
+        "destination": "/volume-one.html"
+      },
+      {
+        "source": "/volume-two",
+        "destination": "/volume-two.html"
+      }
+    ]
+  }
