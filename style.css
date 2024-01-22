@@ -139,12 +139,17 @@ html {
 
 body {
     background: var(--black);
-    padding: 0;
     margin: 0;
     color: var(--primary-color);
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
-    padding:  3.68vw;
+    padding: 3.68vw;
+}
+
+@media (min-width: 1700px) {
+    body {
+        padding: 3.68vw 10vw;
+    }
 }
 
 /* ============== CONTAINERS ============== */
@@ -199,10 +204,46 @@ header ul svg {
     fill: var(--white);
 }
 
+/* ============== MAIN GENERAL ============== */
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.flex-box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.button {
+    display: inline-block;
+    color: var(--yellow);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    border: .5px solid var(--yellow);
+    border-radius: 32px;
+    padding: .7rem;
+    margin-top: .75rem;
+    transition: .2s;
+}
+
+.button:hover {
+    color: var(--black);
+    background: var(--white);
+    border-color: var(--white)
+}
+
 /* ============== HERO ============== */
 
 .section-hero {
-    padding: 2.25rem;
+    padding: 2.25rem 5vw;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    text-align: left;
+    justify-content: space-between;
 }
 
 h1 {
@@ -236,7 +277,11 @@ h1 span:last-of-type {
     }
 }
 
-.section-hero p {
+.section-hero article:first-of-type {
+    width: 60%;
+}
+
+.section-hero article:first-of-type p {
     font-size: 20px;
     font-weight: 200;
     color: var(--white);
@@ -252,35 +297,68 @@ h1 span:last-of-type {
     }
 }
 
-/* ============== MAIN GENERAL ============== */
-
-h2 {
-    font-size: 2rem;
-    font-weight: 700;
+.section-hero article:last-of-type {
+    background-color: #242424;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 40%;
+    min-width: 400px;
+    max-width: 506px;
 }
 
-.flex-box {
+.section-hero article:last-of-type h2 {
+    color: var(--white);
+    margin-top: 0;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: end;
+    flex-wrap: wrap;
 }
 
-.button {
-    display: inline-block;
-    color: var(--yellow);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 18px;
-    border: .5px solid var(--yellow);
-    border-radius: 32px;
-    padding: .7rem;
-    margin-top: .75rem;
-    transition: .2s;
+.section-hero article:last-of-type h2 span {
+    color: var(--primary-color);
+    font-size: 1rem;
+    margin-bottom: 5px;
 }
 
-.button:hover {
-    color: var(--black);
-    background: var(--white);
-    border-color: var(--white)
+.section-hero article:last-of-type .button {
+    color: black;
+    background: var(--yellow);
+    border-radius: 8px;
+    padding: .7rem 2rem;
+}
+
+@media (max-width: 1100px) {
+    .section-hero {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2.25rem 5vw;
+    }
+
+    .section-hero article {
+        width: 100% !important;
+        margin-bottom: 4rem;
+    }
+    
+    .section-hero article:first-of-type {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-hero article:last-of-type {
+        min-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-hero article:last-of-type {
+        min-width: 200px;
+        max-width: 240px;
+    }
 }
 
 /* ============== VOLUMES ============== */
