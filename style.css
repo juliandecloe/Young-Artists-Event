@@ -278,7 +278,7 @@ h1 span:last-of-type {
 }
 
 .section-hero article:first-of-type {
-    width: 60%;
+    width: 50%;
 }
 
 .section-hero article:first-of-type p {
@@ -286,7 +286,7 @@ h1 span:last-of-type {
     font-weight: 200;
     color: var(--white);
     line-height: 2rem;
-    width: 70%;
+    width: 80%;
     padding: 0;
     margin-top: 1rem;
 }
@@ -301,9 +301,9 @@ h1 span:last-of-type {
     background-color: #242424;
     border-radius: 8px;
     padding: 2rem;
-    width: 40%;
+    width: 50%;
     min-width: 400px;
-    max-width: 506px;
+    max-width: 606px;
 }
 
 .section-hero article:last-of-type h2 {
@@ -317,16 +317,48 @@ h1 span:last-of-type {
 }
 
 .section-hero article:last-of-type h2 span {
-    color: var(--primary-color);
+    color: var(--yellow);
     font-size: 1rem;
     margin-bottom: 5px;
 }
 
-.section-hero article:last-of-type .button {
-    color: black;
-    background: var(--yellow);
-    border-radius: 8px;
-    padding: .7rem 2rem;
+.section-hero article:last-of-type p span {
+    display: block;
+}
+
+.section-hero article:last-of-type p span:first-of-type {
+    margin-top: .5rem;
+}
+
+.section-hero article:last-of-type ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.section-hero article:last-of-type ul li {
+    margin-bottom: .5rem;
+}
+
+.section-hero article:last-of-type ul li b {
+    color: var(--white);
+}
+
+.section-hero article:last-of-type ul li a {
+    color: var(--primary-color);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.section-hero article:last-of-type ul li a small {
+    text-decoration: underline;
+}
+
+.section-hero article:last-of-type ul li small {
+    display: block;
+    font-style: italic;
+    color: var(--secondary-color);
+    margin-top: .25rem;
 }
 
 @media (max-width: 1100px) {
